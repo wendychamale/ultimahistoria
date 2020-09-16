@@ -9,7 +9,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-
+        HttpClientTestingModule, RouterTestingModule.withRoutes([]),
       ],
       declarations: [
         AppComponent

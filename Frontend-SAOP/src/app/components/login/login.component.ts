@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private service:UsuarioService,private router:Router ) { }
+  constructor( public service:UsuarioService,public router:Router ) { }
 
   ngOnInit(): void {
   }
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   password:string="";
   carnet: number;
-
+  public error=false;
 
   loguear()
   {
@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
        else
        {
          alert("USUARIO INCORRECTO, VUELVE A INTENTAR!");
+        this.error;
        }
        this.limpiar();
       },

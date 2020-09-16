@@ -14,6 +14,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import {  HttpErrorResponse } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import {  HttpErrorResponse } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterTestingModule
+    RouterTestingModule,
+    ReactiveFormsModule
   
   ],
   providers: [
