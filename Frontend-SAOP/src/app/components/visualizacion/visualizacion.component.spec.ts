@@ -31,17 +31,18 @@ describe('VisualizacionComponent', () => {
   });
 
   
- /* describe('aqui obtenerCursos() is called',()=>{
+  describe('aqui obtenerCursos() is called',()=>{
     it('should handle error', () => {
 const cursos =[] as any;
-var s = new component.obtenerCursos();
+//var s = new component.obtenerCursos();
+var s =new  VisualizacionComponent(component.service,component.router);
 spyOn(s,'obtenerCursos').and.returnValue(cursos);
 component.obtenerCursos();
 expect(component.error).toBeFalsy;
 expect(component.cursos).toEqual(cursos);
       
     });
-  });*/
+  })
 
 
   describe('aqui suma() is called',()=>{

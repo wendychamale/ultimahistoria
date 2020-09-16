@@ -32,12 +32,15 @@ describe('LoginComponent', () => {
 
   describe('aqui loguear',()=>{
     it('entro a loguear', function() {
-const res=[];
+const datos = {
+  carnet:1234 ,
+  clave:'nuevo'
+};
 var s =new  LoginComponent(component.service,component.router);
-//spyOn(s,'loguear').and.returnValue();
+spyOn(s,'loguear').and.returnValue();
 component.loguear;
 expect(component.error).toBeFalsy;
-expect(component.respuesta).toEqual(res);
+expect(component.datos).toEqual(datos);
       
     });
   });

@@ -34,11 +34,11 @@ export class VisualizacionComponent implements OnInit {
   sumar=2;
   ngOnInit() {
     this.obtenerCursos();
-    this.suma();
+    this.suma(2);
   }
 
-  suma(){
-    this.sumar=2;
+  suma(n){
+    this.sumar=n;
     this.error=false;
      return this.sumar;
   }
