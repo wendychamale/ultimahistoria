@@ -20,7 +20,6 @@ export class CursoService {
     return this.http.get<any>(`${this.api}/usuarioCurso/${carnet}`);
   }
 
-
   getDetalleCurso(curso)
   {
     return this.http.post<any>(`${this.api}/usuarioCurso/detalleCurso`,curso);
