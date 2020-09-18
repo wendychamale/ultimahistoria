@@ -8,9 +8,9 @@
  */
 exports.config = {
   allScriptsTimeout: 11000,
-  specs: ['./src/features/**/*.feature'],
+  specs: ['./src/features/*.feature'],
   capabilities: {
-    browserName: 'firefox'
+    browserName: 'chrome'
   },
   directConnect: true, //antes era true
   ignoreUncaughtExceptions: true,
@@ -18,7 +18,8 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   cucumberOpts: {
-    require: ['./src/steps/**/*.steps.ts'],
+  require: ['./src/steps/*.step.ts'],
+  
   },
 
   onPrepare() {
