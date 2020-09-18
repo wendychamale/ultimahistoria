@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { UsuarioService } from './usuario.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
 describe('UsuarioService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports:[
@@ -10,7 +11,7 @@ describe('UsuarioService', () => {
   }));
 
   it('should be created', () => {
-    const service2: UsuarioService = TestBed.get(UsuarioService);
-    expect(service2).toBeTruthy();
+    const service: UsuarioService = TestBed.get(UsuarioService);
+    expect(service).toBeTruthy();
   });
 });

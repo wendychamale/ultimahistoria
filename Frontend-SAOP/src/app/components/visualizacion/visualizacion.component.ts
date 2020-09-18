@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CursoService  } from "../../services/curso.service";
 import { Router } from '@angular/router';
 import { modelocurso } from '../../models/modelocurso';
+import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
   selector: 'app-visualizacion',
@@ -15,12 +16,14 @@ export class VisualizacionComponent implements OnInit {
     ) { }
   
   respuesta: any = [];
-  public error=false;
-  public error1=false;
+
   datos = {
     carnet: '',
     codigo_curso: ''
   };
+
+  public error=false;
+  public c;
 
   cursos: any=[];
   nombrecurso:string="";
@@ -28,20 +31,28 @@ export class VisualizacionComponent implements OnInit {
   creditos="";
   estado="";
   carnet = "201213223";
-  
+  sumar=2;
   ngOnInit() {
     this.obtenerCursos();
+    this.suma(2);
   }
 
+  suma(n){
+    this.sumar=n;
+    this.error=false;
+     return this.sumar;
+  }
   obtenerCursos()
   {
     this.service.getCurso(this.carnet)
     .subscribe(
       res => {
         this.cursos = res;
-
+        this.c=res;
       },
-      err => this.error=true
+      
+      err =>   this.error=true
+    
     )
   }
 

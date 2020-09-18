@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   }
 
   respuesta:any = [];
-  public error=false;
 
   datos = {
     carnet:0 ,
@@ -24,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   password:string="";
   carnet: number;
-
+  public error=false;
 
   loguear()
   {
@@ -45,7 +44,7 @@ export class LoginComponent implements OnInit {
        else
        {
          alert("USUARIO INCORRECTO, VUELVE A INTENTAR!");
-         this.error=true;
+        this.error;
        }
        this.limpiar();
       },

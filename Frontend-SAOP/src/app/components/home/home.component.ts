@@ -11,14 +11,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  counter = 0;
-
-  increment(): void {
-    this.counter++;
-  }
-
-  decrement(): void {
-    this.counter--
-  }
 
 }

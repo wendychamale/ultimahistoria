@@ -1,20 +1,23 @@
 import { Before, Given, Then, When } from 'cucumber';
 import { expect } from 'chai';
+import { element, by } from "protractor";
+import { HomePage } from '../steps/home.po';
 
-import { AppPage } from '../pages/app.po';
-
-let page: AppPage;
+let page: HomePage;
 
 Before(() => {
-  page = new AppPage();
+  page = new HomePage();
 });
 
-Given(/^I am on the home page$/, async () => {
+When(/^I am on the home page$/, {timeout:60 * 5000}, async () => {
   await page.navigateTo();
 });
+
 
 When(/^I do nothing$/, () => {});
 
 Then(/^I should see the title$/, async () => {
-  expect(await page.getTitleText()).to.equal('home works!');
+  
+  expect(await element(by.id("counter")).getText()).to.equal('home works!');
 });
+
